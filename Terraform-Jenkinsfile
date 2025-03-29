@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clean Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
-        
         stage('Git Checkout') {
             steps {
                 git branch: 'main', changelog: false, credentialsId: 'github-sa', poll: false, url: 'https://github.com/fastest-man-alive/terraform.git'
@@ -18,6 +12,7 @@ pipeline {
             steps {
                 sh '''
                 cd gcp
+                ls
                 terraform init
                 terraform validate
                 '''
@@ -47,6 +42,11 @@ pipeline {
                 sh '''
                     terraform apply -auto-approve
                 '''
+            }
+        }
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
             }
         }
     }
