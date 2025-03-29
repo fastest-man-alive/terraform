@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    environment {
-        GOOGLE_CREDENTIALS = credentials('Jenkins-SA') // Use stored GCP credentials
-    }
+#    environment {
+#        GOOGLE_CREDENTIALS = credentials('Jenkins-SA') // Use stored GCP credentials
+#   }
 
     stages {
         stage('Git Checkout') {
