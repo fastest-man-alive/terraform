@@ -5,5 +5,5 @@ variable "region" {
 
 variable "project" {
     default = "solo-levelling-arise"
-    type = "string"
+    type = string
 }
