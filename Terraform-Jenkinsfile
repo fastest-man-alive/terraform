@@ -12,7 +12,6 @@ pipeline {
             steps {
                 sh '''
                 cd gcp
-                ls
                 terraform init
                 terraform validate
                 '''
@@ -22,6 +21,7 @@ pipeline {
         stage('Plan Terraform') {
             steps {
                 sh '''
+                cd gcp
                 terraform plan
                 '''
             }
@@ -40,6 +40,7 @@ pipeline {
         stage('Apply Terraform') {
             steps {
                 sh '''
+                    cd gcp
                     terraform apply -auto-approve
                 '''
             }
