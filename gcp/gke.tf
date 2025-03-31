@@ -1,4 +1,4 @@
-resource "google_container_cluster" "gke" {
+/*resource "google_container_cluster" "gke" {
   name                     = "my-cluster"
   location                 = var.region
   remove_default_node_pool = true
@@ -66,4 +66,4 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
       "https://www.googleapis.com/auth/cloud-platform"
     ]
   }
-}
+}*/
