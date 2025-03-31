@@ -1,5 +1,5 @@
 resource "google_project_iam_binding" "storage_admin" {
-  project = "your-project-id"
+  project = var.project
   role    = "roles/storage.admin"
 
   members = [
