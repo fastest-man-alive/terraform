@@ -1,0 +1,19 @@
+resource "google_compute_subnetwork" "private" {
+  project                  = var.project
+  name                     = "private-subnet"
+  ip_cidr_range            = "10.0.32.0/19"
+  region                   = var.region
+  network                  = google_compute_network.my_vpc.id
+  private_ip_google_access = true
+  stack_type               = "IPV4_ONLY"
+
+  secondary_ip_range {
+    range_name    = "k8s-pods"
+    ip_cidr_range = "172.16.0.0/14"
+  }
+
+  secondary_ip_range {
+    range_name    = "k8s-services"
+    ip_cidr_range = "172.20.0.0/18"
+  }
+}
