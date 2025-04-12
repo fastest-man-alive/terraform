@@ -1,8 +1,8 @@
-/*resource google_service_account_iam_binding "jenkins_kubernetes_binding"{
-    service_account_id = ""
-    role               = ""
+resource google_service_account_iam_binding "user_kubernetes_binding"{
+    service_account_id = "kubernetes-sa@solo-levelling-arise.iam.gserviceaccount.com"
+    role               = "roles/iam.serviceAccountUser"
 
     members   = [
-        "serviceAccount:jenkins-sa@solo-levelling-arise.iam.gserviceaccount.com"
+        "user:talukdark555@gmail.com"
     ]
-}*/
+}
