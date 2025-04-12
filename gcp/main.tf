@@ -32,7 +32,7 @@ resource "google_compute_instance" "ssh-instance" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = kubernetes-sa@solo-levelling-arise.iam.gserviceaccount.com
+    email  = "kubernetes-sa@solo-levelling-arise.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
 }
