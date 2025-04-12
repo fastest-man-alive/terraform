@@ -7,3 +7,8 @@ variable "project" {
     default = "solo-levelling-arise"
     type = string
 }
+
+variable "zone" {
+    default = "us-central1-a"
+    type = string
+}

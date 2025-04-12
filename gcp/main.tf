@@ -36,3 +36,11 @@ resource "google_compute_instance" "ssh-instance" {
     scopes = ["cloud-platform"]
   }
 }
+
+resource "google_compute_instance_iam_member" "private_instance_iam_binding" {
+    project = var.project
+    zone = var.zone
+    instance = google_compute_instance.ssh-instance.name
+    role    = "roles/compute.instanceAdmin.v1"
+    member  = "user:talukdark555@gmail.com"
+}
