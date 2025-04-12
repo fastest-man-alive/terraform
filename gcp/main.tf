@@ -40,7 +40,7 @@ resource "google_compute_instance" "ssh-instance" {
 resource "google_compute_instance_iam_member" "private_instance_iam_binding" {
     project = var.project
     zone = var.zone
-    instance = google_compute_instance.ssh-instance.name
+    instance_name = google_compute_instance.ssh-instance.name
     role    = "roles/compute.instanceAdmin.v1"
     member  = "user:talukdark555@gmail.com"
 }
