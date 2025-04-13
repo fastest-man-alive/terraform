@@ -29,8 +29,6 @@ resource "google_compute_instance" "ssh-instance" {
     foo = "bar"
   }
 
-  metadata_startup_script = "echo hi > /test.txt"
-
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     email  = "kubernetes-sa@solo-levelling-arise.iam.gserviceaccount.com"
