@@ -6,7 +6,7 @@ resource "google_compute_firewall" "allow-iap" {
     protocol = "tcp"
     ports    = ["22"]
   }
-  source_ranges = ["35.235.240.0/20","10.128.0.0/16"]
+  source_ranges = ["35.235.240.0/20","10.0.0.0/16"]
   target_tags = ["allow-iap"]
 }
 
