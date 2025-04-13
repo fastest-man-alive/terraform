@@ -5,7 +5,7 @@
     project = var.project
 }*/
 
-/*resource "google_compute_instance" "ssh-instance" {
+resource "google_compute_instance" "ssh-instance" {
   name         = "my-private-instance"
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"
@@ -25,6 +25,7 @@
   }
 
   metadata = {
+    startup-script = file("init.sh")
     foo = "bar"
   }
 
@@ -43,4 +44,4 @@ resource "google_compute_instance_iam_member" "private_instance_iam_binding" {
     instance_name = google_compute_instance.ssh-instance.name
     role    = "roles/compute.instanceAdmin.v1"
     member  = "user:talukdark555@gmail.com"
-}*/
+}

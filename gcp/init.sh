@@ -1,0 +1,3 @@
+mkdir -p ~/.ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDaIg+RM8Bpc0O02J/XULxeMa6FLpjlnD9tAwC+H4YySK6hSl+3XYgskR7Y2eEnU/XE9mqTlFfefr32uu/jnFtomY1ANK1E46lwPq4bdxD2aOZjk5It6uilArn97e8Q1oCJfTqrrlAaIYC/s+sgTNJNssWC2yv2avuNJZzd7FSWHW8KAfyQKE77xXf4ebWayhvslFX+PM2mCx7mn5Tn0cPUzaEdleQIntRPQIkiD2k0m1dvLFLwlOSj9b9gdl7skxNNA3TYmtf1MKAW8iPw9QXV56csuc1qSWWxBRA6fLgF+0Xb525faRQcdVNiyLj7cQ0YZaMauxwNUaNYnKJF+kOYWEG6XvieoipQDqpnP24eHBz6pch9x3cYXmN1CUxmch/PFEyk9VPmYvgqtjvoF/e5dd8/vJear29XSOE1/GWln1Nm/gmK7KEFCcR5R3sxJqKk/epx1WGIAUNEPV3q1AJjki/s8/tFnKF+qw3tSqfFr7Fst+R6z0IyPwsUZl/qj0s= ktalukdar042@jenkins-vm" >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
