@@ -10,4 +10,5 @@ data "google_compute_router_nat" "internet_access" {
   router = google_compute_router.my-router.name
   project = var.project
   region = var.region
+  depends_on = [google_compute_router.my-router]
 }
