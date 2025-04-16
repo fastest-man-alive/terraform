@@ -6,7 +6,7 @@ resource "google_compute_firewall" "allow-iap" {
     protocol = "tcp"
     ports    = ["22"]
   }
-  source_ranges = ["35.235.240.0/20","10.0.0.0/16"]
+  source_ranges = ["35.235.240.0/20"]
   target_tags = ["allow-iap"]
 }
 
@@ -35,4 +35,23 @@ resource "google_compute_firewall" "allow-egress" {
   }
   destination_ranges = ["10.0.32.0/19"]
   target_tags = ["allow-egress"]
+}
+
+resource "google_compute_firewall" "allow_ingress_rule" {
+  name    = "allow-ingress-from-external-ip"
+  network = google_compute_network.my_vpc.name
+
+  direction = "INGRESS"
+  priority  = 1000
+
+  # Allow traffic from a specific source IP or CIDR block
+  source_ranges = ["10.0.32.0/19"]  # Replace with trusted external IP(s)
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "443", "22","8080"]  # HTTP/HTTPS or other needed ports
+  }
+
+  # Optional: Restrict which instances/pods this applies to
+  target_tags = ["allow-ingress"]  # VM or GKE node tags
 }
