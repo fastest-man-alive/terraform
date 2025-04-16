@@ -38,7 +38,7 @@ resource "google_compute_firewall" "allow-egress" {
 }
 
 resource "google_compute_firewall" "allow_ingress_rule" {
-  name    = "allow-ingress-from-external-ip"
+  name    = "allow-ingress-from-internal-ip"
   network = google_compute_network.my_vpc.name
 
   direction = "INGRESS"

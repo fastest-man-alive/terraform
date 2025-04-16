@@ -10,7 +10,7 @@ resource "google_compute_instance" "ssh-instance" {
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"
 
-  tags = ["allow-iap"]
+  tags = ["allow-iap","allow-ingress"]
 
   boot_disk {
     initialize_params {
