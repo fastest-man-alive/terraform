@@ -26,6 +26,9 @@ resource "google_compute_firewall" "allow-egress" {
   name    = "allow-ingress-to-other-resources"
   network = google_compute_network.my_vpc.name
 
+  direction = "EGRESS"
+  priority  = 1000
+
   allow {
     protocol = "tcp"
     ports    = ["22","80","8080","443"]
