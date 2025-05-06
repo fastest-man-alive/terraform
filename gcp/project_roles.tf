@@ -1,4 +1,4 @@
-resource "google_project_iam_binding" "storage_admin" {
+/*resource "google_project_iam_binding" "storage_admin" {
   project = var.project
   role    = "roles/storage.admin"
 
@@ -15,4 +15,4 @@ resource "google_project_iam_binding" "artifact_registry_reader" {
   members = [
     "serviceAccount:kubernetes-sa@solo-levelling-arise.iam.gserviceaccount.com",
   ]
-}
+}*/

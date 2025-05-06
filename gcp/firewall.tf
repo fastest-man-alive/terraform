@@ -1,4 +1,4 @@
-resource "google_compute_firewall" "allow-iap" {
+/*resource "google_compute_firewall" "allow-iap" {
   name    = "allow-ingress-from-iap"
   network = google_compute_network.my_vpc.name
 
@@ -8,7 +8,7 @@ resource "google_compute_firewall" "allow-iap" {
   }
   source_ranges = ["35.235.240.0/20"]
   target_tags = ["allow-iap"]
-}
+}*/
 
 /*resource "google_compute_firewall" "allow-access-from-laptop" {
   name    = "allow-ingress-from-laptop"
@@ -22,7 +22,7 @@ resource "google_compute_firewall" "allow-iap" {
   target_tags = ["browser-access"]
 }*/
 
-resource "google_compute_firewall" "allow-egress" {
+/*resource "google_compute_firewall" "allow-egress" {
   name    = "allow-ingress-to-other-resources"
   network = google_compute_network.my_vpc.name
 
@@ -35,9 +35,9 @@ resource "google_compute_firewall" "allow-egress" {
   }
   destination_ranges = ["10.0.32.0/19"]
   target_tags = ["allow-egress"]
-}
+}*/
 
-resource "google_compute_firewall" "allow_ingress_rule" {
+/*resource "google_compute_firewall" "allow_ingress_rule" {
   name    = "allow-ingress-from-internal-ip"
   network = google_compute_network.my_vpc.name
 
@@ -54,4 +54,4 @@ resource "google_compute_firewall" "allow_ingress_rule" {
 
   # Optional: Restrict which instances/pods this applies to
   target_tags = ["allow-ingress"]  # VM or GKE node tags
-}
+}*/

@@ -1,4 +1,4 @@
-resource "google_compute_subnetwork" "private" {
+/*resource "google_compute_subnetwork" "private" {
   project                  = var.project
   name                     = "private-subnet"
   ip_cidr_range            = "10.0.32.0/19"
@@ -16,4 +16,4 @@ resource "google_compute_subnetwork" "private" {
     range_name    = "k8s-services"
     ip_cidr_range = "172.20.0.0/18"
   }
-}
+}*/
