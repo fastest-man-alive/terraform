@@ -1,5 +1,5 @@
 provider "google" {
-    impersonate_service_account = "jenkins-sa@solo-levelling-arise.iam.gserviceaccount.com"
+    impersonate_service_account = "your-sa-name"
     project = var.project
     region = var.region
 }

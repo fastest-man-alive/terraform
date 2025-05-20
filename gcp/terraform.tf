@@ -1,6 +1,6 @@
 terraform{
     backend "gcs"{
-        bucket = "solo-levelling-terraform-bucket"
+        bucket = "your-bucket"
         prefix = "terraform/state"
     }
 }

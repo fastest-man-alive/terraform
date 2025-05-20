@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "project" {
-    default = "solo-levelling-arise"
+    default = "your-project-id"
     type = string
 }
 

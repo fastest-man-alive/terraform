@@ -18,7 +18,7 @@
     protocol = "tcp"
     ports    = ["8080"]
   }
-  source_ranges = ["103.24.126.206/32"]
+  source_ranges = [""]
   target_tags = ["browser-access"]
 }*/
 

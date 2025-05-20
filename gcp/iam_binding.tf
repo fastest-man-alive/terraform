@@ -3,6 +3,6 @@
     role               = "roles/iam.serviceAccountUser"
 
     members   = [
-        "user:talukdark555@gmail.com"
+        "user:user@gmail.com"
     ]
 }*/

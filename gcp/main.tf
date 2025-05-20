@@ -41,5 +41,5 @@ resource "google_compute_instance_iam_member" "private_instance_iam_binding" {
     zone = var.zone
     instance_name = google_compute_instance.ssh-instance.name
     role    = "roles/compute.instanceAdmin.v1"
-    member  = "user:talukdark555@gmail.com"
+    member  = "user:user@gmail.com"
 }*/
